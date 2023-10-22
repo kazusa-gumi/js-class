@@ -1,0 +1,29 @@
+こちらは取引価格と増減率を入力し、その結果を出力するシンプルなHTMLとJavaScriptのコードスニペットです：
+html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bitcoin Value Calculator</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        Bitcoin Value at Time of Purchase: <input type="text" id="bitcoinValue"><br>
+        Increase or Decrease Percentage: <input type="text" id="percentage"><br>
+        <button id="calculate">Calculate</button><br>
+        Total Bitcoin Value: <span id="totalValue"></span><br>
+        Increase or Decrease Value: <span id="increaseValue"></span> 
+
+        <script>
+            $("#calculate").click(function() {
+                let bitcoinValue = parseFloat($("#bitcoinValue").val());
+                let percentage = parseFloat($("#percentage").val());
+                
+                let increaseValue = bitcoinValue * (percentage / 100);
+                let totalValue = bitcoinValue + increaseValue;
+                
+                $("#totalValue").text(totalValue);
+                $("#increaseValue").text(increaseValue);
+            });
+        </script>
+    </body>
+</html>

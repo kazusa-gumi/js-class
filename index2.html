@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Property Area Calculator</title>
+</head>
+<body>
+  Property Width: <input type="text" id="width"><br>
+  Property Height: <input type="text" id="height"><br>
+  <button onclick="calculateArea()">Calculate</button><br>
+  Total Property Area: <span id="totalArea"></span>
+
+  <script>
+    function calculateArea() {
+      const width = document.getElementById('width').value;
+      const height = document.getElementById('height').value;
+      
+      const totalArea = width * height;
+      
+      document.getElementById('totalArea').innerText = totalArea;
+    }
+  </script>
+</body>
+</html>

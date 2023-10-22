@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto-Currency Calculator</title>
+</head>
+<body>
+  Total Amount of Money: <input type="text" id="money"><br>
+  Bitcoin Price: <input type="text" id="bitcoinPrice"><br>
+  Ethereum Price: <input type="text" id="ethereumPrice"><br>
+  Litecoin Price: <input type="text" id="litecoinPrice"><br>
+  <button onclick="calculateCrypto()">Calculate</button><br>
+  <p id="output"></p>
+
+  <script>
+    function calculateCrypto() {
+      let money = document.getElementById('money').value;
+      let bitcoinPrice = document.getElementById('bitcoinPrice').value;
+      let ethereumPrice = document.getElementById('ethereumPrice').value;
+      let litecoinPrice = document.getElementById('litecoinPrice').value;
+      
+      let bitcoinQuantity = Math.floor(money / bitcoinPrice);
+      let ethereumQuantity = Math.floor(money / ethereumPrice);
+      let litecoinQuantity = Math.floor(money / litecoinPrice);
+      
+      document.getElementById('output').innerText = "With " + money + "$ you can buy: " 
+        + bitcoinQuantity + " Bitcoins, " 
+        + ethereumQuantity + " Ethereums, and " 
+        + litecoinQuantity + " Litecoins";
+    }
+  </script>
+</body>
+</html>
