@@ -46,6 +46,7 @@ function createTodo(title, finished) {
     newTodo.classList.add('todo-item');
     if (finished) {
         newTodo.classList.add('finished')
+        chkBox.setAttribute('checked', true);
     } else {
         newTodo.classList.add('unfinished');
     }
@@ -65,4 +66,19 @@ let todoList = [
     { title: "learn JavaScript", finished: true },
 ]
 
+// {} is an object
+// todoList[0].title = "Hit the gym".
+// todoList[0].finished = false
 // Use a loop to output the lost to the browser.
+
+// array[0][0]is for a 2d array
+// array[i].title, array[i].finished
+
+function genList(list) {
+    let len = list.length;
+    for (let i = 0; i < len; i++) {
+        createTodo(list[i].title, list[i].finished)
+    }
+}
+
+genList(todoList);
