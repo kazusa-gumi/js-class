@@ -1,0 +1,18 @@
+.todo-item.finished {
+    background-color: rgb(10, 240, 170);
+}
+
+.todo-item.unfinished {
+    background-color: rgb(240, 150, 150);
+}
+
+#todo-list{
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.todo-item {
+    font-size: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
